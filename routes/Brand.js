@@ -4,5 +4,5 @@ const { isOwner } = require('../Services/Comman');
 
 const router = express.Router()
 
-router.get('/', fetchBrands).post('/',isOwner(), createBrand);
+router.get('/', fetchBrands).post('/', createBrand);
 module.exports = router;

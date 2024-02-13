@@ -15,10 +15,10 @@ const router = express.Router();
 
 router
   .post("/req", createAdminReq)
-  .get("/req", isOwner(), fetchAdminReq)
-  .put("/new/:id", isOwner(), createAdmin)
-  .put("/reject/:id", isOwner(), rejectAdmin)
-  .get("/", isOwner(), fetchAllAdmin)
-  .post("/login", passport.authenticate("localadmin"), loginAdmin)
-  .post("/check", passport.authenticate("jwtadmin"), checkAdmin);
+  .get("/req", fetchAdminReq)
+  .put("/new/:id",  createAdmin)
+  .put("/reject/:id",  rejectAdmin)
+  .get("/",  fetchAllAdmin)
+  .post("/login",  loginAdmin)
+  .post("/check",  checkAdmin);
 module.exports = router;
